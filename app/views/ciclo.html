@@ -1,0 +1,21 @@
+
+<div ng-controller="cicloController">
+	<input type="text" ng-model="curso.abrev">
+	<input type="text" ng-model="curso.desc">
+
+	<input type="button" ng-click="save()" value ="Save">
+	{{ciclo.id}}
+	<table>
+		<tr>
+			<td>CICLO__</td>
+			<td>DESCRIPCION___</td>
+			<td>OPCIONES</td>
+		</tr>
+		<tr ng-repeat="d in ciclo_list">
+			<td>{{ d.abrev }}</td>
+			<td>{{ d.desc }}</td>
+			<td> <a href="" ng-click="sel(d)">Editar</a></td>
+			<td> <a href="" ng-click="delete(d)">Eliminar</a></td>
+		</tr>
+	</table>
+</div>
